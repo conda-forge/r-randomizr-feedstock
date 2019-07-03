@@ -1,4 +1,4 @@
-{% set version = '0.16.1' %}
+{% set version = '0.18.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,19 +10,19 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/randomizr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomizr/randomizr_{{ version }}.tar.gz
-  sha256: f8f3674b23692d50831316330abb9f25a0c427762966f2d4be38e363372740ca
+  sha256: f3e6a21b6ce74f9ad142e59454c6cb4a6944c12896a77ada4e8cae1a3f47ac84
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -53,7 +53,7 @@ extra:
 
 # Package: randomizr
 # Title: Easy-to-Use Tools for Common Forms of Random Assignment and Sampling
-# Version: 0.16.1
+# Version: 0.18.0
 # Authors@R: c(person("Alexander", "Coppock", email = "acoppock@gmail.com", role = c("aut", "cre")), person("Jasper", "Cooper", email = "jaspercooper@gmail.com", role = c("ctb")), person("Neal", "Fultz", email = "nfultz@gmail.com", role = c("ctb"), comment = "C version of restricted partitions"))
 # Description: Generates random assignments for common experimental designs and  random samples for common sampling designs.
 # URL: https://declaredesign.org/r/randomizr/, https://github.com/DeclareDesign/randomizr
@@ -61,12 +61,13 @@ extra:
 # Depends: R (>= 3.4.0)
 # License: MIT + file LICENSE
 # LazyData: true
+# Encoding: UTF-8
 # Suggests: knitr, dplyr, blockTools, testthat, rmarkdown, ri
 # VignetteBuilder: knitr
-# RoxygenNote: 6.0.1
+# RoxygenNote: 6.1.1
 # NeedsCompilation: yes
-# Packaged: 2018-07-10 22:55:31 UTC; Alex
+# Packaged: 2019-04-23 18:39:28 UTC; gdblair
 # Author: Alexander Coppock [aut, cre], Jasper Cooper [ctb], Neal Fultz [ctb] (C version of restricted partitions)
 # Maintainer: Alexander Coppock <acoppock@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2018-07-11 17:10:02 UTC
+# Date/Publication: 2019-04-23 19:30:03 UTC
