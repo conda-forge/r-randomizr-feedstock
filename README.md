@@ -3,6 +3,7 @@ About r-randomizr-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-randomizr-feedstock/blob/main/LICENSE.txt)
 
+
 About r-randomizr
 -----------------
 
@@ -11,6 +12,7 @@ Home: https://declaredesign.org/r/randomizr/, https://github.com/DeclareDesign/r
 Package license: MIT
 
 Summary: Generates random assignments for common experimental designs and  random samples for common sampling designs.
+
 About r-randomizr
 -----------------
 
