@@ -1,4 +1,4 @@
-{% set version = "0.24.0" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/randomizr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomizr/randomizr_{{ version }}.tar.gz
-  sha256: 23e2c64669ea52c311f4ea45c1526d161c0fd7bd2aee108d23e10d44157c80e0
+  sha256: 56468c08167d5425cbf003777e33028ab7374f71097c6a6de4aadb462057fe64
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
