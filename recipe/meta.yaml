@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/randomizr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomizr/randomizr_{{ version }}.tar.gz
-  sha256: 56468c08167d5425cbf003777e33028ab7374f71097c6a6de4aadb462057fe64
+  sha256: 6a06f7fdd7ca1cd4a4cd9ac64b849d08e75fad2b10c3d40b9afc4261abbd8824
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
